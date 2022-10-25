@@ -6,10 +6,10 @@ from projects.models import Project
 
 @login_required
 def show_project(request, id):
-    show_project = Project.objects.filter(id=id)
-    task = Task.objects.all()
+    show_project = Project.objects.get(id=id)
+    tasks = Task.objects.all()
     context = {
         "show_project": show_project,
-        "tasks": task,
+        "tasks": tasks,
     }
     return render(request, "tasks/detail.html", context)
