@@ -17,7 +17,10 @@ class Task(models.Model):
 
     assignee = models.ForeignKey(
         settings.AUTH_USER_MODEL,
+        null=True,
         related_name="tasks",
         on_delete=models.CASCADE,
-        null=True,
     )
+
+    def __str__(self):
+        return self.name
