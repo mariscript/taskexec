@@ -31,12 +31,26 @@ def create_project(request):
     return render(request, "projects/create.html", context)
 
 
-def index(request):
-    if Theme.objects.filter(user=request.user).exists():
-        color = Theme.objects.get(user=request.user).color
-    else:
-        color ='blue'
-    return render(request, "projects/list.html", {'color': color})
+@login_required
+def delete_project(request, id):
+    project = Project.objects.get(id=id)
+    if request.method == "POST":
+        project.delete()
+        return redirect("list_projects")
+
+    context = {
+        "single_project": project,
+    }
+
+    return render(request, "projects/delete.html", context)
+
+
+# def index(request):
+# if Theme.objects.filter(user=request.user).exists():
+# color = Theme.objects.get(user=request.user).color
+# else:
+# color = "blue"
+# return render(request, "projects/list.html", {"color": color})
 
 
 # def theme(request):
@@ -60,5 +74,5 @@ def index(request):
 #         else:
 #             user4 = Theme(user=request.uesr, color='white')
 #             user4.save()
-    
+
 #     return redirect("")
