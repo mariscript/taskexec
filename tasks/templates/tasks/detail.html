@@ -11,6 +11,7 @@
             <h2>Tasks</h2>
             <p>
                 <a href="{% url 'create_task' %}">Create a new task</a>
+                <a href="{% url 'delete_project' show_project.id %}">Delete this project</a>
             </p>
             {% if not show_project.tasks.all %}
                 <p>This project has no tasks</p>
