@@ -121,7 +121,7 @@ table {
 /* Make the task and projects forms look nicer */
 .task-form,
 .project-form {
-  background-color: white;
+  background-color: rgb(49, 44, 44, 0.4);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: auto;
