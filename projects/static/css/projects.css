@@ -72,6 +72,14 @@ a:visited {
   padding-right: 2em;
 }
 
+
+h1 {
+  color: #000;
+}
+/* .delete-project {
+
+} */
+
 /* Make the input tags look nicer */
 input {
   height: 1.5em;
@@ -120,10 +128,12 @@ table {
 
 /* Make the task and projects forms look nicer */
 .task-form,
-.project-form {
-  background-color: white;
+.project-form,
+.delete-form {
+  background-color: rgb(49, 44, 44, 0.4);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
   margin: auto;
   max-width: 600px;
   padding: 2em;
@@ -180,6 +190,7 @@ table {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
   margin: auto;
   max-width: 800px;
   padding: 2em;
@@ -189,6 +200,7 @@ table {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
   margin: auto;
   max-width: 800px;
   padding: 2em;
@@ -285,7 +297,7 @@ table {
 }
 
 input:checked+.slider {
-  background-color: #2196F3;
+  background-color: #363a3d;
 }
 
 input:focus+.slider {
