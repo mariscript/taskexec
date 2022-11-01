@@ -11,7 +11,10 @@ body {
   padding: 0;
 }
 
-input, textarea, button, select {
+input,
+textarea,
+button,
+select {
   margin: 0;
   padding: 0;
 }
@@ -117,7 +120,8 @@ table {
 
 /* Make the task and projects forms look nicer */
 .task-form,
-.project-form {
+.project-form,
+.delete-form {
   background-color: white;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -132,7 +136,8 @@ table {
 .signup-form h1,
 .project-list h1,
 .project-form h1,
-.project-detail h1 {
+.project-detail h1,
+.delete-form h1 {
   margin-top: 0;
 }
 
@@ -280,15 +285,15 @@ table {
   transition: .2s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -302,4 +307,3 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
