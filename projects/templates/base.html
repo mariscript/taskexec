@@ -38,10 +38,8 @@
                             <a href="{% url 'signup' %}">Signup</a>
                         </li>
                     {% endif %}
-                <button onclick="toggleTheme('dark');">Dark</button>
-                <button onclick="toggleTheme('light');">Light</button>
                 <label class="switch">
-                 <input type="checkbox">
+                 <input type="checkbox" id="darkswitch" onclick="tgl()">
                  <span class="slider round">
                  </span>
                  </label>
