@@ -10,7 +10,7 @@
             {% block title %}
             {% endblock title %}
         </title>
-        <link rel="stylesheet" href="{% static "css/receipts.css" %}">
+        <link rel="stylesheet" href="{% static "css/projects.css" %}">
     </head>
     <body>
         <header>
@@ -24,7 +24,7 @@
                             <a href="{% url 'list_projects' %}">My projects</a>
                         </li>
                         <li>
-                            <a href="{% url 'logout' %}">Logout</a>
+                            <a href="{% url 'logout' %}" class="logout">Logout</a>
                         </li>
                     {% else %}
                         <li>

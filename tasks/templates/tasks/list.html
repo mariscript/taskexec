@@ -23,8 +23,8 @@
                         {% for task in task_list %}
                             <tr>
                                 <td>{{ task.name }}</td>
-                                <td>{{ task.start_date }}</td>
-                                <td>{{ task.due_date }}</td>
+                                <td>{{ task.start_date|date:"m/j/y" }} {{ task.start_date|time:"h:i" }}</td>
+                                <td>{{ task.due_date|date:"m/j/y" }} {{ task.due_date|time:"h:i" }}</td>
                                 <td>{{ task.is_completed|yesno:"Done,no" }}</td>
                             </tr>
                         {% endfor %}

@@ -1,40 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 /* Set all elements to use the Open Sans font */
-body, input, textarea, button, select {
+body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
 }
 
+input, textarea, button, select {
+  margin: 0;
+  padding: 0;
+}
+
 /* Set the background color of all pages */
 html, body {
-  background-color: #F2F2F2;
+  background-color: #000000;
 }
 
 /* Set the style of the navigation list */
-header nav ul {
+nav {
   background-color: white;
   border-bottom: 1px solid #CCC;
   box-sizing: border-box;
   list-style: none;
-  margin-top: 0;
+  margin: auto;
   margin-bottom: 2em;
   padding: 0 0 0 1em;
+  padding-top: 1em;
 }
 
 /* Set the spacing and layout of the nav list items */
-header nav ul li {
-  display: inline-block;
+header li {
+  display: inline;
   margin: 0 1em;
   padding: 1em 0 1em 0;
 }
 
 /* Set the style of the links in the nav */
-header nav ul li a {
+.nav {
+  color: #000;
   font-weight: bold;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  color: red;
+}
+
+.logout {
+  float: right;
+  padding-right: 2em;
 }
 
 /* Make the input tags look nicer */
@@ -74,9 +94,10 @@ table {
 /* Make the login and sign-up forms look nicer */
 .login-form,
 .signup-form {
-  background-color: #000;
+  background-color: rgb(49, 44, 44);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
   margin: auto;
   max-width: 400px;
   padding: 2em;
