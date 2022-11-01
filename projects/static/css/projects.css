@@ -301,7 +301,7 @@ table {
 }
 
 input:checked+.slider {
-  background-color: #2196F3;
+  background-color: #424b51;
 }
 
 input:focus+.slider {
