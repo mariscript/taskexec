@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+
 # from django.contrib.auth.models import User
 
 
@@ -22,7 +23,7 @@ class Project(models.Model):
 #     THEME = [
 #         (True, _('dark')),
 #         (False, _('light')),
-#     ] 
+#     ]
 #     user = models.ForeignKey(
 #         settings.AUTH_USER_MODEL,
 #         on_delete=models.CASCADE)
@@ -30,7 +31,8 @@ class Project(models.Model):
 
 #     class Meta:
 #         constraints = [
-#             models.UniqueConstraint(fields=['user'], name='One Entry Per User')
+#             models.UniqueConstraint(fields=['user'],
+#             name='One Entry Per User',)
 #         ]
 
 # class Theme(models.Model):
@@ -39,4 +41,3 @@ class Project(models.Model):
 
 #     def __str__(self):
 #         return self.user
-
