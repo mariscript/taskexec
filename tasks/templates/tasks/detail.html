@@ -7,8 +7,8 @@
     <main>
         <div class="project-detail">
             <h1>{{ task.name }}</h1>
-            {% if note_list != None %}
-            {% for note in note_list reversed %}
+            {% if task.notes.all %}
+            {% for note in task.notes.all reversed %}
                 <ul>
                     <li>
                         <p>

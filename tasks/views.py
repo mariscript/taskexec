@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from tasks.forms import NoteForm, TaskForm
-from tasks.models import Task, Note
+from tasks.models import Task
 from django.contrib.auth.decorators import login_required
 
 
@@ -33,10 +33,8 @@ def task_list(request):
 @login_required
 def show_task(request, id):
     task = Task.objects.get(id=id)
-    note = Note.objects.all()
     context = {
         "task": task,
-        "note_list": note,
     }
     return render(request, "tasks/detail.html", context)
 
