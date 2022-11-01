@@ -8,13 +8,14 @@
         <div class="project-detail">
             <h1>{{ show_project.name }}</h1>
             <p>{{ show_project.description }}</p>
+            <a href="{% url 'delete_project' show_project.id  %}" class="delete-project">Delete This Project</a>
             <h2>Tasks</h2>
             <p>
-                <a href="{% url 'create_task' %}">Create a new task</a>
-                <a href="{% url 'delete_project' show_project.id %}">Delete this project</a>
+                <a href="{% url 'create_task' %}">Create A New Task</a>
+
             </p>
             {% if not show_project.tasks.all %}
-                <p>This project has no tasks</p>
+                <p>This Project Has No Tasks</p>
             {% else %}
                 <table>
                     <thead>
@@ -31,9 +32,14 @@
                             <tr>
                                 <td>{{ task.name }}</td>
                                 <td>{{ task.assignee }}</td>
-                                <td>{{ task.start_date }}</td>
-                                <td>{{ task.due_date }}</td>
-                                <td>{{ task.is_completed|yesno:"yes,no" }}</td>
+                                <td>{{ task.start_date|date:"m/j/y" }} {{ task.start_date|time:"h:i" }}</td>
+                                <td>{{ task.due_date|date:"m/j/y" }} {{ task.due_date|time:"h:i" }}</td>
+                                <td>
+
+                                    <input type="checkbox" id="check1" class="toggle">
+                                    <label for="check1">Status</label>
+                                    <br />
+                                </td>
                             </tr>
                         {% endfor %}
                     </tbody>

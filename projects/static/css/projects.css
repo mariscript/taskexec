@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 /* Set all elements to use the Open Sans font */
 body {
   background: url("https://i.postimg.cc/HsxSGsdc/4k-Colorful.jpg") center fixed;
   background-position: top;
   background-size: cover;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Slab', serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -72,6 +72,15 @@ a:visited {
   padding-right: 2em;
 }
 
+
+h1 {
+  color: #000;
+}
+
+/* .delete-project {
+
+} */
+
 /* Make the input tags look nicer */
 input {
   height: 1.5em;
@@ -109,7 +118,7 @@ table {
 /* Make the login and sign-up forms look nicer */
 .login-form,
 .signup-form {
-  background-color: rgb(49, 44, 44);
+  background-color: rgb(49, 44, 44, 0.4);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #fff;
@@ -122,9 +131,10 @@ table {
 .task-form,
 .project-form,
 .delete-form {
-  background-color: white;
+  background-color: rgb(49, 44, 44, 0.4);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
   margin: auto;
   max-width: 600px;
   padding: 2em;
@@ -178,9 +188,10 @@ table {
 /* Add a nice box around the lists and details */
 
 .project-detail {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
   margin: auto;
   max-width: 800px;
   padding: 2em;
@@ -190,6 +201,7 @@ table {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
   margin: auto;
   max-width: 800px;
   padding: 2em;
@@ -205,13 +217,16 @@ table {
   padding: 2em;
 }
 
+.my-tasks-list th {
+  color: black;
+}
+
 /* Add padding to the table header and table datum tags */
-.my-tasks-list th,
+
 .my-tasks-list td,
 .project-list th,
 .project-list td,
-.project-detail th,
-.project-detail td {
+.project-detail th {
   padding: .5em;
 }
 
@@ -306,4 +321,78 @@ input:checked+.slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+}
+
+input[type="checkbox"].toggle {
+  opacity: 0;
+  position: absolute;
+  left: -9000px;
+  top: -9000px;
+}
+
+input[type="checkbox"].toggle+label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"].toggle+label::before {
+  content: "";
+  width: 2em;
+  height: 1em;
+  background-color: hsl(0, 80%, 90%);
+  border-radius: 1em;
+  margin-right: .25em;
+  transition: background-color 200ms ease-in-out;
+}
+
+input[type="checkbox"].toggle+label::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  content: "\2715";
+  font-size: .5em;
+  height: .9em;
+  left: .2em;
+  width: 1.8em;
+  height: 1.8em;
+  background-color: hsl(0, 80%, 60%);
+  color: white;
+  border-radius: 1em;
+  transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+input[type="checkbox"].toggle:focus+label::before {
+  outline: 1px solid black;
+}
+
+input[type="checkbox"].toggle:checked+label::before {
+  background-color: hsl(100, 70%, 90%);
+}
+
+input[type="checkbox"].toggle:checked+label::after {
+  content: "\2713";
+  transform: translateX(100%);
+  background-color: hsl(100, 70%, 60%);
+}
+
+input[type="checkbox"].toggle:disabled+label {
+  color: #777;
+}
+
+input[type="checkbox"].toggle:disabled+label::before {
+  background-color: #CCC;
+}
+
+input[type="checkbox"].toggle:disabled+label::after {
+  background-color: #777;
 }
