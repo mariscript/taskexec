@@ -120,7 +120,8 @@ table {
 
 /* Make the task and projects forms look nicer */
 .task-form,
-.project-form {
+.project-form,
+.delete-form {
   background-color: white;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -284,11 +285,11 @@ table {
   transition: .2s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
@@ -306,4 +307,3 @@ input:checked+.slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
