@@ -6,11 +6,11 @@
 {% block content %}
     <main>
         <div class="signup-form">
-            <h1>Signup</h1>
+            <h1>Sign Up</h1>
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button>Signup</button>
+                <button>Sign Up</button>
             </div>
         </main>
     {% endblock content %}
