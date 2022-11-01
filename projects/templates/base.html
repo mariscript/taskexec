@@ -11,10 +11,7 @@
             {% endblock title %}
         </title>
         <link rel="stylesheet" href="{% static "css/projects.css" %}">
-<<<<<<< HEAD
-=======
         <script src="https://kit.fontawesome.com/e952425fa4.js" crossorigin="anonymous"></script>
->>>>>>> 06b792e9e95ecb4540ed0056dcfe7b4c8236e02a
 
 
     </head>
@@ -53,6 +50,10 @@
         {% endblock content %}
         <footer>
             <p><center>This task manager was brought to you by Room 92 <span>&#169</span></center></p>
+            <center>
+                <a href="{% url 'list_projects' %}"><i class="fa-solid fa-house"></i></a>
+                <a href="{% url 'show_my_tasks' %}"><i class="fa-solid fa-list-check"></i></a>
+            </center>
         </footer>
     </body>
 </html>
