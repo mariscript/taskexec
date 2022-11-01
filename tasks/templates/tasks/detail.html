@@ -32,7 +32,11 @@
                                 <td>{{ task.assignee }}</td>
                                 <td>{{ task.start_date }}</td>
                                 <td>{{ task.due_date }}</td>
-                                <td>{{ task.is_completed|yesno:"yes,no" }}</td>
+                                <td>
+                                    <input type="checkbox" id="check1" class="toggle">
+                                    <label for="check1">Status</label>
+                                    <br />
+                                </td>
                             </tr>
                         {% endfor %}
                     </tbody>
