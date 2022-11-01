@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 /* Set all elements to use the Open Sans font */
 body {
   background: url("https://i.postimg.cc/HsxSGsdc/4k-Colorful.jpg") center fixed;
   background-position: top;
   background-size: cover;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Slab', serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -109,7 +109,7 @@ table {
 /* Make the login and sign-up forms look nicer */
 .login-form,
 .signup-form {
-  background-color: rgb(49, 44, 44);
+  background-color: rgb(49, 44, 44, 0.4);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #fff;
@@ -120,8 +120,7 @@ table {
 
 /* Make the task and projects forms look nicer */
 .task-form,
-.project-form,
-.delete-form {
+.project-form {
   background-color: white;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -178,7 +177,7 @@ table {
 /* Add a nice box around the lists and details */
 
 .project-detail {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin: auto;
