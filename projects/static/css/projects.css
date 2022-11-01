@@ -2,11 +2,16 @@
 
 /* Set all elements to use the Open Sans font */
 body {
-  background: url("https://i.postimg.cc/HsxSGsdc/4k-Colorful.jpg") center fixed;
+  /* background-color: rgb(255, 255, 255); */
   background-position: top;
   background-size: cover;
   font-family: 'Roboto Slab', serif;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+form {
   margin: 0;
   padding: 0;
 }
@@ -330,6 +335,30 @@ footer {
   height: 80px;
 }
 
+<<<<<<< HEAD
+
+html {
+  --background-primary: #fff;
+  --color-primary: #333;
+}
+
+html[data-theme='dark'] {
+  --background-primary: #030303;
+  --color-primary: #ccc;
+}
+
+html {
+  transition: color 300ms, background-color 300ms;
+  background: var(--background-primary);
+  color: var(--color-primary);
+}
+
+h1,
+h2,
+p {
+  color: var(--color-primary);
+}
+=======
 input[type="checkbox"].toggle {
   opacity: 0;
   position: absolute;
@@ -396,3 +425,4 @@ input[type="checkbox"].toggle:disabled+label::before {
 input[type="checkbox"].toggle:disabled+label::after {
   background-color: #777;
 }
+>>>>>>> 83a5d500466413cb52a19a2d3d261b1274d9c620
