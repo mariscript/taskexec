@@ -9,3 +9,10 @@ class ProjectAdmin(admin.ModelAdmin):
         "description",
         "owner",
     )
+
+# @admin.register(Theme)
+# class ThemeAdmin(admin.ModelAdmin):
+#     list_display = (
+#         "color",
+#         "user",
+#     )

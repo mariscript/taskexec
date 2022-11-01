@@ -11,9 +11,11 @@
             {% endblock title %}
         </title>
         <link rel="stylesheet" href="{% static "css/projects.css" %}">
+          
+
     </head>
     <body>
-        <header>
+        <header bgcolor="{{ color }}">
             <nav class="nav">
                 {% if user.is_authenticated %}
                     <ul>
@@ -34,7 +36,13 @@
                             <a href="{% url 'signup' %}">Signup</a>
                         </li>
                     {% endif %}
+                <label class="switch">
+                 <input type="checkbox">
+                 <span class="slider round">
+                 </span>
+                 </label>
                 </ul>
+
             </nav>
         </header>
         {% block content %}
