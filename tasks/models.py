@@ -5,6 +5,7 @@ from projects.models import Project
 
 class Task(models.Model):
     name = models.CharField(max_length=200)
+    notes = models.TextField(null=True)
     start_date = models.DateTimeField()
     due_date = models.DateTimeField()
     is_completed = models.BooleanField(default=False)
