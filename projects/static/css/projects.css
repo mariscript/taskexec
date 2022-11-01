@@ -2,11 +2,12 @@
 
 /* Set all elements to use the Open Sans font */
 body {
-  /* background-color: rgb(255, 255, 255); */
-  background-position: top;
+  /* background: url("https://i.postimg.cc/d3fdVN4r/5121062-1.png") no-repeat center fixed; */
   background-size: cover;
+  background-position: cover;
   font-family: 'Roboto Slab', serif;
   font-size: 16px;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -196,7 +197,6 @@ table {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  color: white;
   margin: auto;
   max-width: 800px;
   padding: 2em;
@@ -206,7 +206,6 @@ table {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  color: white;
   margin: auto;
   max-width: 800px;
   padding: 2em;
@@ -222,9 +221,9 @@ table {
   padding: 2em;
 }
 
-.my-tasks-list th {
+/* .my-tasks-list th {
   color: black;
-}
+} */
 
 /* Add padding to the table header and table datum tags */
 
@@ -336,13 +335,14 @@ footer {
 }
 
 
+/* 
 html {
   --background-primary: #fff;
   --color-primary: #333;
-}
+} */
 
 html[data-theme='dark'] {
-  --background-primary: #030303;
+  --background-primary: rgba(0, 0, 0, 0.9);
   --color-primary: #ccc;
 }
 
@@ -352,8 +352,16 @@ html {
   color: var(--color-primary);
 }
 
+th,
 h1,
 h2,
-p {
+p,
+a {
   color: var(--color-primary);
+}
+
+@media {
+  body {
+    background-image: linear-gradient(#000, #FFF,);
+  }
 }
