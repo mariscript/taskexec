@@ -4,6 +4,10 @@ from projects.forms import ProjectForm
 from django.contrib.auth.decorators import login_required
 
 
+def home_page(request):
+    return render(request, "projects/home.html")
+
+
 @login_required
 def show_project(request, id):
     show_project = Project.objects.get(id=id)

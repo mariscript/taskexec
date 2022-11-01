@@ -5,7 +5,6 @@ from projects.models import Project
 
 class Task(models.Model):
     name = models.CharField(max_length=200)
-    notes = models.TextField(null=True)
     start_date = models.DateTimeField()
     due_date = models.DateTimeField()
     is_completed = models.BooleanField(default=False)
@@ -25,3 +24,17 @@ class Task(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Note(models.Model):
+    description = models.TextField(null=True)
+    created_on = models.DateTimeField(auto_now=True)
+    task = models.ForeignKey(
+        Task,
+        related_name="notes",
+        on_delete=models.CASCADE,
+        null=True,
+    )
+
+    def __str__(self):
+        return self.description
