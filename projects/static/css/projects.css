@@ -217,13 +217,16 @@ table {
   padding: 2em;
 }
 
+.my-tasks-list th {
+  color: black;
+}
+
 /* Add padding to the table header and table datum tags */
-.my-tasks-list th,
+
 .my-tasks-list td,
 .project-list th,
 .project-list td,
-.project-detail th,
-.project-detail td {
+.project-detail th {
   padding: .5em;
 }
 
