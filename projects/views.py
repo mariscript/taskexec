@@ -5,6 +5,15 @@ from django.contrib.auth.decorators import login_required
 
 
 @login_required
+def show_project(request, id):
+    show_project = Project.objects.get(id=id)
+    context = {
+        "show_project": show_project,
+    }
+    return render(request, "projects/detail.html", context)
+
+
+@login_required
 def project_list(request):
     projects = Project.objects.filter(owner=request.user)
     context = {

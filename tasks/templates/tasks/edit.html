@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Add notes
+{% endblock title %}
+{% block content %}
+    <main>
+        <div class="task-form">
+            <h1>Add Notes</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Add</button>
+            </form>
+        </div>
+    </main>
+{% endblock content %}

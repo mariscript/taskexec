@@ -1,31 +1,41 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    My Tasks
+    Project
 {% endblock title %}
 {% block content %}
     <main>
-        <div class="my-tasks-list">
-            <h1>My Tasks</h1>
-            {% if not task_list %}
-                <p>You have no tasks</p>
+        <div class="project-detail">
+            <h1>{{ show_project.name }}</h1>
+            <p>{{ show_project.description }}</p>
+            <a href="{% url 'delete_project' show_project.id  %}" class="delete-project">Delete This Project</a>
+            <h2>Tasks</h2>
+            <p>
+                <a href="{% url 'create_task' %}">Create A New Task</a>
+               
+            </p>
+            {% if not show_project.tasks.all %}
+                <p>This Project Has No Tasks</p>
             {% else %}
                 <table>
                     <thead>
                         <tr>
                             <th>Name</th>
+                            <th>Assignee</th>
                             <th>Start date</th>
                             <th>Due date</th>
                             <th>Is completed</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% for task in task_list %}
+                        {% for task in show_project.tasks.all %}
                             <tr>
-                                <td><a href="{% url 'show_task' task.id %}">{{ task.name }}</a></td>
+                                <td>{{ task.name }}</td>
+                                <td>{{ task.assignee }}</td>
                                 <td>{{ task.start_date|date:"m/j/y" }} {{ task.start_date|time:"h:i" }}</td>
                                 <td>{{ task.due_date|date:"m/j/y" }} {{ task.due_date|time:"h:i" }}</td>
-                                <td>{{ task.is_completed|yesno:"Done,no" }}</td>
+                                <td>
+                                    {{ task.is_completed|yesno:"yes,no" }}</td>
                             </tr>
                         {% endfor %}
                     </tbody>

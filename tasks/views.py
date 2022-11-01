@@ -1,19 +1,7 @@
 from django.shortcuts import redirect, render
-from tasks.forms import TaskForm
+from tasks.forms import NoteForm, TaskForm
 from tasks.models import Task
 from django.contrib.auth.decorators import login_required
-from projects.models import Project
-
-
-@login_required
-def show_project(request, id):
-    show_project = Project.objects.get(id=id)
-    tasks = Task.objects.all()
-    context = {
-        "show_project": show_project,
-        "tasks": tasks,
-    }
-    return render(request, "tasks/detail.html", context)
 
 
 @login_required
@@ -39,3 +27,44 @@ def task_list(request):
         "task_list": task,
     }
     return render(request, "tasks/list.html", context)
+
+
+@login_required
+def show_task(request, id):
+    task = Task.objects.get(id=id)
+    context = {
+        "task": task,
+    }
+    return render(request, "tasks/detail.html", context)
+
+
+@login_required
+def add_task_notes(request, id):
+    task = Task.objects.get(id=id)
+    if request.method == "POST":
+        form = NoteForm(request.POST, instance=task)
+        if form.is_valid():
+            form.save()
+            return redirect("show_task", id=id)
+    else:
+        form = NoteForm(instance=task)
+
+    context = {
+        "form": form,
+    }
+
+    return render(request, "tasks/edit.html", context)
+
+
+@login_required
+def delete_task(request, id):
+    task = Task.objects.get(id=id)
+    if request.method == "POST":
+        task.delete()
+        return redirect("show_my_tasks")
+
+    context = {
+        "task": task,
+    }
+
+    return render(request, "tasks/delete.html", context)
