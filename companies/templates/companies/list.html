@@ -5,28 +5,34 @@
 {% endblock title %}
 {% block content %}
     <main>
-        <div class="company-list">
+        <div class="my_company-list">
             <h1>My Companies</h1>
             <p>
-                <a href="{% url 'create_company' %}">Create A New Project</a>
+                <a href="{% url 'create_company' %}">Create A New Company</a>
             </p>
-            {% if not company_list %}
-                <p>There are no companies that have been created</p>
+            {% if not my_company_list %}
+                <p>You are not a part of any companies</p>
             {% else %}
                 <table>
                     <thead>
                         <tr>
                             <th>Name</th>
                             <th>Owner</th>
+                            <th>Employees</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% for company in company_list %}
+                        {% for company in my_company_list %}
                             <tr>
                                 <td>
                                     {{ company.name }}
                                 </td>
                                 <td>{{ company.owner }}</td>
+                                {% for employee in company.employees.all %}
+                                    <td>
+                                        {{ employee.name }}
+                                    </td>
+                                {% endfor %}
                             </tr>
                         {% endfor %}
                     </tbody>

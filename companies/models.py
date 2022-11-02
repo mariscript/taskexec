@@ -10,12 +10,23 @@ class Company(models.Model):
         related_name="companies",
         on_delete=models.CASCADE,
     )
-    employee = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        related_name="company",
-        on_delete=models.CASCADE,
-        null=True,
-    )
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name_plural = "Companies"
+
+
+class Employee(models.Model):
+    name = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        null=True,
+    )
+    company = models.ForeignKey(
+        Company,
+        related_name="employees",
+        on_delete=models.CASCADE,
+        null=True,
+    )

@@ -10,12 +10,13 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
+        ("companies", "0001_initial"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.CreateModel(
-            name="Company",
+            name="Project",
             fields=[
                 (
                     "id",
@@ -26,21 +27,23 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("name", models.CharField(max_length=100)),
+                ("name", models.CharField(max_length=200)),
+                ("description", models.TextField()),
                 (
-                    "employee",
+                    "company",
                     models.ForeignKey(
                         null=True,
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name="company",
-                        to=settings.AUTH_USER_MODEL,
+                        related_name="projects",
+                        to="companies.company",
                     ),
                 ),
                 (
                     "owner",
                     models.ForeignKey(
+                        null=True,
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name="companies",
+                        related_name="projects",
                         to=settings.AUTH_USER_MODEL,
                     ),
                 ),

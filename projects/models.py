@@ -20,7 +20,7 @@ class Project(models.Model):
         Company,
         related_name="projects",
         on_delete=models.CASCADE,
-        null=True
+        null=True,
     )
 
     def __str__(self):
