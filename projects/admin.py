@@ -9,4 +9,3 @@ class ProjectAdmin(admin.ModelAdmin):
         "description",
         "owner",
     )
-

@@ -26,7 +26,7 @@ select {
 }
 
 .login-button {
-  background-color: #968e8e; 
+  background-color: #968e8e;
   color: black;
   border: none;
   border-radius: 12px;
@@ -38,12 +38,12 @@ select {
 
 .login-button:hover {
   background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   transition-duration: 0.4s;
 }
 
 .signup-button {
-  background-color: #968e8e; 
+  background-color: #968e8e;
   color: black;
   border: none;
   border-radius: 12px;
@@ -55,12 +55,12 @@ select {
 
 .signup-button:hover {
   background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   transition-duration: 0.4s;
 }
 
 .projects-button {
-  background-color: #968e8e; 
+  background-color: #968e8e;
   color: black;
   border: none;
   border-radius: 12px;
@@ -72,12 +72,12 @@ select {
 
 .projects-button:hover {
   background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   transition-duration: 0.4s;
 }
 
 .tasks-button {
-  background-color: #968e8e; 
+  background-color: #968e8e;
   color: black;
   border: none;
   border-radius: 12px;
@@ -89,18 +89,31 @@ select {
 
 .tasks-button:hover {
   background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transition-duration: 0.4s;
+}
+
+
+.logout-button {
+  background-color: #968e8e;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  padding: 50px 50px;
+  position: fixed;
+  transition-duration: 0.4s;
+  left: 35%;
+}
+
+
+.logout-button:hover {
+  background-color: #6e816e;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   transition-duration: 0.4s;
 }
 
 
 
-
-
-/* Set the background color of all pages */
-/* html, body {
-  background-color: #000000;
-} */
 
 /* Set the style of the navigation list */
 nav {
@@ -120,7 +133,7 @@ header li {
   margin: 0 1em;
   padding: 1em 0 1em 0;
   top: 180px;
- }
+}
 
 /* Set the style of the links in the nav */
 .nav {
@@ -448,7 +461,7 @@ footer {
 }
 
 
-/* 
+/*
 html {
   --background-primary: #fff;
   --color-primary: #333;
@@ -456,9 +469,17 @@ html {
 .fa {
   display: flex;
   float: right;
+  width: 3%;
+  margin: auto;
+  right: 6%;
+}
+
+.fa-mode {
+  display: flex;
+  float: right;
   margin: auto;
   position: absolute;
-  right: 6%;
+  right: 10%;
 }
 
 html[data-theme='dark'] {
@@ -550,6 +571,6 @@ input[type="checkbox"].toggle:disabled+label::after {
 
 @media {
   body {
-    background-image: linear-gradient(#000, #FFF,);
+    background-image: linear-gradient(#000, #FFF, );
   }
 }
