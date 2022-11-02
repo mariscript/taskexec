@@ -41,10 +41,13 @@ def show_task(request, id):
 
 @login_required
 def create_note(request, id):
+    task = Task.objects.get(id=id)
     if request.method == "POST":
         form = NoteForm(request.POST)
         if form.is_valid():
-            form.save()
+            note = form.save(False)
+            note.task = task
+            note.save()
             return redirect("show_task", id=id)
     else:
         form = NoteForm()

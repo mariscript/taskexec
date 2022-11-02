@@ -19,5 +19,4 @@ class NoteForm(ModelForm):
         model = Note
         fields = [
             "description",
-            "task",
         ]

@@ -18,7 +18,6 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
-
 # class ThemeConfiguration(models.Model):
 #     THEME = [
 #         (True, _('dark')),
