@@ -1,6 +1,5 @@
 from django.db import models
 from django.conf import settings
-from companies.models import Company
 
 # from django.contrib.auth.models import User
 
@@ -14,13 +13,6 @@ class Project(models.Model):
         related_name="projects",
         on_delete=models.CASCADE,
         null=True,
-    )
-
-    company = models.ForeignKey(
-        Company,
-        related_name="projects",
-        on_delete=models.CASCADE,
-        null=True
     )
 
     def __str__(self):
