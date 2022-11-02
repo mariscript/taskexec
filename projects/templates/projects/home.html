@@ -1,5 +1,59 @@
-{% extends 'base.html' %}
+{% load static %}
 
-{% block title %}
-    Home Page
-{% endblock title %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block title %} Home Page
+            {% endblock title %}
+        </title>
+        <link rel="stylesheet" href="{% static "css/projects.css" %}">
+        <script src="https://kit.fontawesome.com/e952425fa4.js" crossorigin="anonymous"></script>
+        <script src="{% static 'java.js' %}"></script>
+        {% comment %} <script src="{% static 'home.js' %}"></script>  {% endcomment %}
+        <link rel="stylesheet" href="{% static "css/home.css" %}">
+    </head>
+    <body>
+        <header>
+            <nav class="nav">
+                        {% comment %} <li>
+                            <a href="{% url 'login' %}"><i class='fas fa-sign-in-alt' style='font-size:30px'></i></a>
+                        </li> {% endcomment %}
+                        {% comment %} <li>
+                        <a href="{% url 'signup' %}"><i class='fas fa-pen-fancy' style='font-size:36px'></i></a>
+                        </li> {% endcomment %}
+                <li><img src ="https://i.postimg.cc/2y0cf92n/92-2.jpg" alt="92 logo"></li>
+                
+                 <label class="switch">
+                 <input type="checkbox" id="darkswitch" onclick="tgl()">
+                 <span class="slider round">
+                 </span>
+                 </label>
+                 <i style="font-size:20px" class="fa">&#xf042;</i>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        <div>
+            <h1>Welcome to Ninety - Two</h1>
+            <div class="containter">
+         <button type="button" class="login-button"><a href="{% url 'login' %}"><i class='fas fa-sign-in-alt' style='font-size:30px'></i></a></button>  
+         <button type="button" class="signup-button"><a href="{% url 'signup' %}"><i class='fas fa-pen-fancy' style='font-size:30px'></i></a></button>
+                </div>
+        
+
+
+        </main>
+        {% comment %} {% block content %}
+        {% endblock content %} {% endcomment %}
+        <footer>
+            <p>This task manager was brought to you by Room 92<br> 
+                <a href="{% url 'list_projects' %}"><i class='fas fa-project-diagram'></i></a>
+                <a href="{% url 'show_my_tasks' %}"><i class="fa-solid fa-list-check"></i></a>
+            <div class="footer-img"><img src="https://i.postimg.cc/K8b41nh3/92small.jpg"></div>
+        </footer>
+    </body>
+</html>
