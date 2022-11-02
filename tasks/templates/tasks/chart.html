@@ -2,8 +2,12 @@
 
 {% block content %}
     <p><a href="{% url 'show_my_tasks' %}">List View</a></p>
+
     {% autoescape off %}
-        {{ plot_div }}
+        {% if tasks.all|length > 0 %}
+            {{ plot_div }}
+        {% endif %}
     {% endautoescape %}
+
 
 {% endblock content %}

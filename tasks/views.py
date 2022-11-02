@@ -98,5 +98,7 @@ def task_chart(request):
 
     fig.update_yaxes(autorange="reversed")
     gantt_plot = plot(fig, output_type="div")
-    context = {"plot_div": gantt_plot}
+    context = {
+        "plot_div": gantt_plot,
+    }
     return render(request, "tasks/chart.html", context)
