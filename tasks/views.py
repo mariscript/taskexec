@@ -2,6 +2,9 @@ from django.shortcuts import redirect, render
 from tasks.forms import NoteForm, TaskForm
 from tasks.models import Task
 from django.contrib.auth.decorators import login_required
+import pandas as pd
+from plotly.offline import plot
+import plotly.express as px
 
 
 @login_required
@@ -68,3 +71,29 @@ def delete_task(request, id):
     }
 
     return render(request, "tasks/delete.html", context)
+
+
+@login_required
+def task_chart(request):
+    qs = Task.objects.filter(assignee=request.user)
+    projects_data = [
+        {
+            "Task": x.name,
+            "Start": x.start_date,
+            "Finish": x.due_date,
+            "Assignee": x.assignee,
+            "Project": x.project,
+        }
+        for x in qs
+    ]
+
+    df = pd.DataFrame(projects_data)
+
+    fig = px.timeline(
+        df, x_start="Start", x_end="Finish", y="Task", color="Project"
+    )
+
+    fig.update_yaxes(autorange="reversed")
+    gantt_plot = plot(fig, output_type="div")
+    context = {"plot_div": gantt_plot}
+    return render(request, "tasks/chart.html", context)
