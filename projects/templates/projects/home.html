@@ -18,12 +18,6 @@
     <body>
         <header>
             <nav class="nav">
-                        {% comment %} <li>
-                            <a href="{% url 'login' %}"><i class='fas fa-sign-in-alt' style='font-size:30px'></i></a>
-                        </li> {% endcomment %}
-                        {% comment %} <li>
-                        <a href="{% url 'signup' %}"><i class='fas fa-pen-fancy' style='font-size:36px'></i></a>
-                        </li> {% endcomment %}
                 <li><img src ="https://i.postimg.cc/2y0cf92n/92-2.jpg" alt="92 logo"></li>
                 
                  <label class="switch">
@@ -52,8 +46,7 @@
 
 
         </main>
-        {% comment %} {% block content %}
-        {% endblock content %} {% endcomment %}
+
         <footer>
             <p>This task manager was brought to you by Room 92<br> 
                 <a href="{% url 'list_projects' %}"><i class='fas fa-project-diagram'></i></a>
