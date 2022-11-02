@@ -102,7 +102,7 @@ select {
   padding: 50px 50px;
   position: fixed;
   transition-duration: 0.4s;
-  left: 35%;
+  right: 35%;
 }
 
 
@@ -112,6 +112,24 @@ select {
   transition-duration: 0.4s;
 }
 
+
+.comp-button {
+  background-color: #968e8e;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  padding: 50px 50px;
+  position: fixed;
+  transition-duration: 0.4s;
+  left: 35%;
+}
+
+
+.comp-button:hover {
+  background-color: #6e816e;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transition-duration: 0.4s;
+}
 
 
 

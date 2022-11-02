@@ -25,7 +25,6 @@
                  <span class="slider round">
                  </span>
                  </label>
-                 <i style="font-size:20px" class="fa ml-auto">&#xf042;</i>
                 </ul>
             </nav>
         </header>
@@ -37,10 +36,10 @@
         <button type="button" class="login-button" title="Login"><a href="{% url 'login' %}"><i class='fas fa-sign-in-alt' style='font-size:30px'></i></a></button>
         <button type="button" class="signup-button" title="Sign Up"><a href="{% url 'signup' %}"><i class='fas fa-pen-fancy' style='font-size:30px'></i></a></button><br><br><br><br><br><br><br>
         {% else %}
-        <button type="button" class="projects-button" title="Projects"><a href="{% url 'list_projects' %}"><i class='fas fa-project-diagram' style='font-size:30px'></i></a>
+        <button type="button" class="projects-button" title="Projects"><a href="{% url 'list_projects' %}"><i class='fas fa-project-diagram' style='font-size:30px'></i></a></button>
         <button type="button" class="tasks-button" title="Tasks"><a href="{% url 'show_my_tasks' %}"><i class="fa-solid fa-list-check" style='font-size:30px'></i></a></button><br><br><br><br><br><br><br>
         <button type="button" class="logout-button" title="Logout"><a href="{% url 'logout' %}"><i style='font-size:30px' class='fas'>&#xf2f5;</i></a></button>
-        <button type="button"><a href="{% url 'my_company_list' %}">My Companies</a></button>
+        <button type="button" class="comp-button" title="Companies"><a href="{% url 'my_company_list' %}"><i class='far fa-building' style='font-size:38px'></i></a></button>
         {% endif %}
         </div>
 
