@@ -26,7 +26,7 @@ select {
 }
 
 .login-button {
-  background-color: #968e8e; 
+  background-color: #968e8e;
   color: black;
   border: none;
   border-radius: 12px;
@@ -38,12 +38,12 @@ select {
 
 .login-button:hover {
   background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   transition-duration: 0.4s;
 }
 
 .signup-button {
-  background-color: #968e8e; 
+  background-color: #968e8e;
   color: black;
   border: none;
   border-radius: 12px;
@@ -55,12 +55,12 @@ select {
 
 .signup-button:hover {
   background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   transition-duration: 0.4s;
 }
 
 .projects-button {
-  background-color: #968e8e; 
+  background-color: #968e8e;
   color: black;
   border: none;
   border-radius: 12px;
@@ -72,12 +72,12 @@ select {
 
 .projects-button:hover {
   background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   transition-duration: 0.4s;
 }
 
 .tasks-button {
-  background-color: #968e8e; 
+  background-color: #968e8e;
   color: black;
   border: none;
   border-radius: 12px;
@@ -89,7 +89,7 @@ select {
 
 .tasks-button:hover {
   background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   transition-duration: 0.4s;
 }
 
@@ -120,7 +120,7 @@ header li {
   margin: 0 1em;
   padding: 1em 0 1em 0;
   top: 180px;
- }
+}
 
 /* Set the style of the links in the nav */
 .nav {
@@ -448,7 +448,7 @@ footer {
 }
 
 
-/* 
+/*
 html {
   --background-primary: #fff;
   --color-primary: #333;
@@ -545,11 +545,4 @@ input[type="checkbox"].toggle:disabled+label::before {
 
 input[type="checkbox"].toggle:disabled+label::after {
   background-color: #777;
-}
-
-
-@media {
-  body {
-    background-image: linear-gradient(#000, #FFF,);
-  }
 }
