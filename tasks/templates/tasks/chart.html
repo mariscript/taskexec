@@ -1,7 +1,7 @@
 {% extends "tasks/chart_base.html" %}
 
 {% block content %}
-
+    <p><a href="{% url 'show_my_tasks' %}">List View</a></p>
     {% autoescape off %}
         {{ plot_div }}
     {% endautoescape %}
