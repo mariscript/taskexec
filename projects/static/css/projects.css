@@ -94,13 +94,26 @@ select {
 }
 
 
+.logout-button {
+  background-color: #968e8e; 
+  color: black;
+  border: none;
+  border-radius: 12px;
+  padding: 50px 50px;
+  position: fixed;
+  transition-duration: 0.4s;
+  left: 35%;
+}
+
+
+.logout-button:hover {
+  background-color: #6e816e;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.4s;
+}
 
 
 
-/* Set the background color of all pages */
-/* html, body {
-  background-color: #000000;
-} */
 
 /* Set the style of the navigation list */
 nav {
@@ -456,9 +469,17 @@ html {
 .fa {
   display: flex;
   float: right;
+  width: 3%;
+  margin: auto;
+  right: 6%;
+}
+
+.fa-mode {
+  display: flex;
+  float: right;
   margin: auto;
   position: absolute;
-  right: 6%;
+  right: 10%;
 }
 
 html[data-theme='dark'] {
@@ -466,7 +487,8 @@ html[data-theme='dark'] {
   --color-primary: #ccc;
 }
 
-html {
+html
+{
   transition: color 300ms, background-color 300ms;
   background: var(--background-primary);
   color: var(--color-primary);
@@ -548,8 +570,10 @@ input[type="checkbox"].toggle:disabled+label::after {
 }
 
 
+
+
 @media {
   body {
-    background-image: linear-gradient(#000, #FFF,);
+    background: linear-gradient(#000, #FFF,);
   }
 }
