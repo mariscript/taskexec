@@ -26,6 +26,7 @@ def create_task(request):
 @login_required
 def task_list(request):
     task = Task.objects.filter(assignee=request.user)
+
     context = {
         "task_list": task,
     }
@@ -42,15 +43,14 @@ def show_task(request, id):
 
 
 @login_required
-def add_task_notes(request, id):
-    task = Task.objects.get(id=id)
+def create_note(request, id):
     if request.method == "POST":
-        form = NoteForm(request.POST, instance=task)
+        form = NoteForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect("show_task", id=id)
     else:
-        form = NoteForm(instance=task)
+        form = NoteForm()
 
     context = {
         "form": form,

@@ -7,11 +7,24 @@
     <main>
         <div class="project-detail">
             <h1>{{ task.name }}</h1>
-            {% if task.notes != None %}
-                <p>{{ task.notes }}</p>
+            {% if task.notes.all %}
+            {% for note in task.notes.all reversed %}
+                <ul>
+                    <li>
+                        <p>
+                            Added on {{note.created_on|date:"m/j/y" }} {{note.created_on|time:"h:i" }}
+                        </p>
+                        <p>
+                            {{ note.description }}
+                        </p>
+
+                    </li>
+
+                </ul>
+            {% endfor %}
             {% endif %}
 
-            <a href="{% url 'add_task_notes' task.id  %}" class="delete-project">Add Some Notes</a>
-            <a href="{% url 'delete_task' task.id  %}" class="delete-project">Delete This Task</a>
+            <a href="{% url 'create_note' task.id %}" class="delete-project">Add Note</a>
+            <a href="{% url 'delete_task' task.id %}" class="delete-project">Delete This Task</a>
         </div>
 {% endblock content %}

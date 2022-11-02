@@ -1,9 +1,37 @@
-{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+        Sign Up
+        </title>
+        <link rel="stylesheet" href="{% static "css/projects.css" %}">
+        <script src="https://kit.fontawesome.com/e952425fa4.js" crossorigin="anonymous"></script>
+        <script src="{% static 'java.js' %}"></script>
 
-{% block title %}
-    Sign Up
-{% endblock title %}
-{% block content %}
+
+    </head>
+    <body>
+        <header>
+    <nav class="nav">
+                    <ul class ="signup-page">
+                        <li>
+                        <a href="{% url 'home_page' %}"><i class="fa-solid fa-house"></i></a>
+                        </li>
+                        <li>
+                <label class="switch">
+                 <input type="checkbox" id="darkswitch" onclick="tgl()">
+                 <span class="slider round">
+                 </span>
+                 </label>
+                 <i style="font-size:20px" class="fa">&#xf042;</i>
+                </ul>
+
+            </nav>
+        </header>
     <main>
         <div class="signup-form">
             <h1>Sign Up</h1>
@@ -11,6 +39,17 @@
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button>Sign Up</button>
+            </form><br>
+            <li>
+            <a href="{% url 'login' %}">Login</a>
+            </li>
             </div>
         </main>
-    {% endblock content %}
+         <footer>
+            <p>This task manager was brought to you by Room 92<br> 
+                <a href="{% url 'list_projects' %}"><i class='fas fa-project-diagram'></i></a>
+                <a href="{% url 'show_my_tasks' %}"><i class="fa-solid fa-list-check"></i></a>
+            <div class="footer-img"><img src="https://i.postimg.cc/K8b41nh3/92small.jpg"></div>
+        </footer>
+    </body>
+

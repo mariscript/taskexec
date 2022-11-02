@@ -4,9 +4,11 @@ from projects.views import (
     create_project,
     delete_project,
     show_project,
+    home_page,
 )
 
 urlpatterns = [
+    path("home/", home_page, name="home_page"),
     path("", project_list, name="list_projects"),
     path("<int:id>/", show_project, name="show_project"),
     path("create/", create_project, name="create_project"),
