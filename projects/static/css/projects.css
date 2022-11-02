@@ -138,6 +138,14 @@ img {
 
 }
 
+.login-page {
+  list-style-type: none;
+}
+
+.signup-link {
+  list-style-type: none;
+  text-align: center;
+}
 
 
 /* .img {
@@ -191,9 +199,11 @@ table {
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #fff;
+  list-style-type: none;
   margin: auto;
   max-width: 400px;
   padding: 2em;
+  text-align: center;
 }
 
 /* Make the task and projects forms look nicer */

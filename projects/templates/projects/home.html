@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="{% static "css/projects.css" %}">
         <script src="https://kit.fontawesome.com/e952425fa4.js" crossorigin="anonymous"></script>
         <script src="{% static 'java.js' %}"></script>
-        {% comment %} <script src="{% static 'home.js' %}"></script>  {% endcomment %}
         <link rel="stylesheet" href="{% static "css/home.css" %}">
     </head>
     <body>
@@ -40,8 +39,8 @@
         <div>
             <h1>Welcome to Ninety - Two</h1>
             <div class="containter">
-         <button type="button" class="login-button"><a href="{% url 'login' %}"><i class='fas fa-sign-in-alt' style='font-size:30px'></i></a></button>  
-         <button type="button" class="signup-button"><a href="{% url 'signup' %}"><i class='fas fa-pen-fancy' style='font-size:30px'></i></a></button>
+         <button type="button" class="login-button" title="Login"><a href="{% url 'login' %}"><i class='fas fa-sign-in-alt' style='font-size:30px'></i></a></button>  
+         <button type="button" class="signup-button" title="Sign Up"><a href="{% url 'signup' %}"><i class='fas fa-pen-fancy' style='font-size:30px'></i></a></button>
                 </div>
         
 
