@@ -7,7 +7,9 @@
     <main>
         <div class="my-tasks-list">
             <h1>My Tasks</h1>
+            {% if task_list|length > 0 %}
             <p><a href="{% url 'task_chart' %}">Chart View</a></p>
+            {% endif %}
             {% if not task_list %}
                 <p>You have no tasks</p>
             {% else %}

@@ -19,7 +19,7 @@
         <header>
             <nav class="nav">
                 <li><img src ="https://i.postimg.cc/2y0cf92n/92-2.jpg" alt="92 logo"></li>
-                
+
                  <label class="switch">
                  <input type="checkbox" id="darkswitch" onclick="tgl()">
                  <span class="slider round">
@@ -34,21 +34,22 @@
             <h1>Welcome to Ninety - Two</h1>
             <div class="containter">
         {% if not user.is_authenticated %}
-        <button type="button" class="login-button" title="Login"><a href="{% url 'login' %}"><i class='fas fa-sign-in-alt' style='font-size:30px'></i></a></button>  
+        <button type="button" class="login-button" title="Login"><a href="{% url 'login' %}"><i class='fas fa-sign-in-alt' style='font-size:30px'></i></a></button>
         <button type="button" class="signup-button" title="Sign Up"><a href="{% url 'signup' %}"><i class='fas fa-pen-fancy' style='font-size:30px'></i></a></button><br><br><br><br><br><br><br>
         {% else %}
         <button type="button" class="projects-button" title="Projects"><a href="{% url 'list_projects' %}"><i class='fas fa-project-diagram' style='font-size:30px'></i></a>
         <button type="button" class="tasks-button" title="Tasks"><a href="{% url 'show_my_tasks' %}"><i class="fa-solid fa-list-check" style='font-size:30px'></i></a></button><br><br><br><br><br><br><br>
-        <button type="button" class="logout-button" title="Logout"><a href="{% url 'logout' %}"><i style='font-size:30px' class='fas'>&#xf2f5;</i></a>
+        <button type="button" class="logout-button" title="Logout"><a href="{% url 'logout' %}"><i style='font-size:30px' class='fas'>&#xf2f5;</i></a></button>
+        <button type="button"><a href="{% url 'my_company_list' %}">My Companies</a></button>
         {% endif %}
         </div>
-        
+
 
 
         </main>
 
         <footer>
-            <p>This task manager was brought to you by Room 92<br> 
+            <p>This task manager was brought to you by Room 92<br>
                 <a href="{% url 'list_projects' %}"><i class='fas fa-project-diagram'></i></a>
                 <a href="{% url 'show_my_tasks' %}"><i class="fa-solid fa-list-check"></i></a>
             <div class="footer-img"><img src="https://i.postimg.cc/K8b41nh3/92small.jpg"></div>
