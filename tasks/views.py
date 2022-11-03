@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from tasks.forms import NoteForm, TaskForm
 from tasks.models import Task
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 import pandas as pd
 from plotly.offline import plot
 import plotly.express as px
@@ -77,6 +78,16 @@ def delete_task(request, id):
 
 
 @login_required
+def search_task(request):
+    query = request.GET.get("search")
+    tasks = Task.objects.filter(Q(name__icontains=query))
+    context = {
+        "results": tasks,
+    }
+    return render(request, "tasks/search.html", context)
+
+
+@login_required
 def task_chart(request):
     qs = Task.objects.filter(assignee=request.user)
     projects_data = [
@@ -109,5 +120,7 @@ def task_chart(request):
 
     fig.update_yaxes(autorange="reversed")
     gantt_plot = plot(fig, output_type="div")
-    context = {"plot_div": gantt_plot}
+    context = {
+        "plot_div": gantt_plot,
+    }
     return render(request, "tasks/chart.html", context)

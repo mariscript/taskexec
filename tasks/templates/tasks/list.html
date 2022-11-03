@@ -7,7 +7,15 @@
     <main>
         <div class="my-tasks-list">
             <h1>My Tasks</h1>
+        <div class="search-bar">
+        <form action="{% url 'search_task' %}">
+      <input type="text" placeholder="Search Tasks" name="search">
+      <button type="submit" class="w3-button w3-white w3-border w3-border-black w3-round-large"><i class="fa fa-search"></i></button>
+        </form></div>
+            <a href="{% url 'create_task' %}">Create A New Task</a>
+            {% if task_list|length > 0 %}
             <p><a href="{% url 'task_chart' %}">Chart View</a></p>
+            {% endif %}
             {% if not task_list %}
                 <p>You have no tasks</p>
             {% else %}
@@ -15,9 +23,9 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Start date</th>
-                            <th>Due date</th>
-                            <th>Is completed</th>
+                            <th>Start Date</th>
+                            <th>Due Date</th>
+                            <th>Is Completed</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,7 +34,12 @@
                                 <td><a href="{% url 'show_task' task.id %}">{{ task.name }}</a></td>
                                 <td>{{ task.start_date|date:"m/j/y" }} {{ task.start_date|time:"h:i" }}</td>
                                 <td>{{ task.due_date|date:"m/j/y" }} {{ task.due_date|time:"h:i" }}</td>
-                                <td>{{ task.is_completed|yesno:"Done,no" }}</td>
+                                <td>
+                                <form method="post" action="#">
+                                {% csrf_token %}
+                                <input type="checkbox" name="is_completed" {% if task.is_completed %}checked{% endif %} />
+                                </form></td>
+
                             </tr>
                         {% endfor %}
                     </tbody>

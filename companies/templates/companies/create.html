@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Create Company
+{% endblock title %}
+{% block content %}
+    <main>
+        <div class="project-form">
+            <h1>Create A New Company</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="create-comp">Create</button>
+            </form>
+        </div>
+    </main>
+{% endblock content %}

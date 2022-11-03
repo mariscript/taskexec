@@ -24,7 +24,7 @@
             {% endfor %}
             {% endif %}
 
-            <a href="{% url 'create_note' task.id %}" class="delete-project">Add Note</a>
+            <a href="{% url 'create_note' task.id %}" class="delete-project">Add Note</a><br>
             <a href="{% url 'delete_task' task.id %}" class="delete-project">Delete This Task</a>
         </div>
 {% endblock content %}

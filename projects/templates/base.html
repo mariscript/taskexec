@@ -22,16 +22,16 @@
                 {% if user.is_authenticated %}
                     <ul>
                         <li>
-                            <a href="{% url 'home_page' %}"><i class="fa-solid fa-house"></i></a>
+                            <button class="btn btn-1"><a href="{% url 'home_page' %}"><i class="fa-solid fa-house"></i>Home</a></button>
                         </li>
                         <li>
-                            <a href="{% url 'list_projects' %}"><i class='fas fa-project-diagram'></i></a>
+                            <button class="btn btn-2"><a href="{% url 'list_projects' %}"><i class='fas fa-project-diagram'></i>Projects</a></button>
                         </li>
                         <li>
-                            <a href="{% url 'show_my_tasks' %}"><i class="fa-solid fa-list-check"></i></a>
+                            <button class="btn btn-3"><a href="{% url 'show_my_tasks' %}"><i class="fa-solid fa-list-check"></i>My Tasks</a></button>
                         </li>
                         <li>
-                            <a href="{% url 'logout' %}"><i class='fas'>&#xf2f5;</i></a>
+                            <button class="btn btn-4"><a href="{% url 'logout' %}"><i class='fas'>&#xf2f5;</i>Logout</a></button>
                         </li>
                     {% else %}
                         <li>
@@ -56,8 +56,6 @@
         <footer>
             <p>This task manager was brought to you by Room 92 <span>&#169</span></p><br>
                 <div class="footer-img"><img src="https://i.postimg.cc/K8b41nh3/92small.jpg"></div><br><br>
-                <a href="{% url 'list_projects' %}"><i class='fas fa-project-diagram'></i></a>
-                <a href="{% url 'show_my_tasks' %}"><i class="fa-solid fa-list-check"></i></a>
         </footer>
     </body>
 </html>
