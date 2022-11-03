@@ -1,5 +1,5 @@
 from django.contrib import admin
-from companies.models import Company, Employee
+from companies.models import Company
 
 
 # Register your models here.
@@ -8,12 +8,4 @@ class CompanyAdmin(admin.ModelAdmin):
     list_display = (
         "name",
         "owner",
-    )
-
-
-@admin.register(Employee)
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display = (
-        "name",
-        "company",
     )

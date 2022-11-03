@@ -16,17 +16,3 @@ class Company(models.Model):
 
     class Meta:
         verbose_name_plural = "Companies"
-
-
-class Employee(models.Model):
-    name = models.OneToOneField(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        null=True,
-    )
-    company = models.ForeignKey(
-        Company,
-        related_name="employees",
-        on_delete=models.CASCADE,
-        null=True,
-    )

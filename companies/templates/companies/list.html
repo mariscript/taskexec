@@ -24,7 +24,6 @@
                         <tr>
                             <th>Name</th>
                             <th>Owner</th>
-                            <th>Employees</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,11 +33,6 @@
                                     {{ company.name }}
                                 </td>
                                 <td>{{ company.owner }}</td>
-                                {% for employee in company.employees.all %}
-                                    <td>
-                                        {{ employee.name }}
-                                    </td>
-                                {% endfor %}
                             </tr>
                         {% endfor %}
                     </tbody>

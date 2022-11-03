@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from companies.models import Company, Employee
+from companies.models import Company
 from django.db.models import Q
 from companies.forms import CompanyForm
 
@@ -23,11 +23,8 @@ def create_company(request):
         form = CompanyForm(request.POST)
         if form.is_valid:
             company = form.save(False)
-            employee = Employee.objects.create()
-            company.owner, employee.name = request.user, request.user
-            employee.company = company
+            company.owner = request.user
             form.save()
-            employee.save()
             return redirect("my_company_list")
     else:
         form = CompanyForm()
