@@ -34,11 +34,11 @@
                                 <td>{{ task.assignee }}</td>
                                 <td>{{ task.start_date|date:"m/j/y" }} {{ task.start_date|time:"h:i" }}</td>
                                 <td>{{ task.due_date|date:"m/j/y" }} {{ task.due_date|time:"h:i" }}</td>
-                            <td>
-                        <form method="post" action="#">
+                                <td>
+                                <form method="post" action="#">
                                 {% csrf_token %}
-                        <input type="checkbox" name="is_completed" {% if task.is_completed %}checked{% endif %} />
-                            </form></td>
+                                <input type="checkbox" name="is_completed" {% if task.is_completed %}checked{% endif %} />
+                                </form></td>
 
                             
                         {% endfor %}
