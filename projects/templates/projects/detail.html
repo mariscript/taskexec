@@ -8,12 +8,8 @@
         <div class="project-detail">
             <h1>{{ show_project.name }}</h1>
             <p>{{ show_project.description }}</p>
-<<<<<<< HEAD
             {% if show_project.owner == user %}
-                <a href="{% url 'delete_project' show_project.id  %}" class="delete-project">Delete This Project</a>
-=======
-                <button class="btn btn-9 btn-sep"><a href="{% url 'delete_project' show_project.id  %}"><i class='far fa-trash-alt'></i>Delete This Project</a></button>
->>>>>>> 424ee5055bca5695a57531f8f7cb079eecfa95d6
+                <button class="btn btn-9 btn-sep"><a href="{% url 'delete_project' show_project.id  %}" ><i class='far fa-trash-alt'></i>Delete This Project</a></button>
             <h2>Tasks</h2>
             <p>
                 <button class="btn btn-8 btn-sep"><a href="{% url 'create_task' %}"><i class='fas fa-tasks'></i>Create A New Task</a></button>

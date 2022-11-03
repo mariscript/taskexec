@@ -15,7 +15,6 @@ class Company(models.Model):
         return self.name
 
     class Meta:
-<<<<<<< HEAD
         verbose_name_plural = "Companies"
 
 
@@ -30,6 +29,3 @@ class Employee(models.Model):
         related_name="employees",
         on_delete=models.CASCADE,
     )
-=======
-        verbose_name_plural = "Companies"
->>>>>>> 424ee5055bca5695a57531f8f7cb079eecfa95d6

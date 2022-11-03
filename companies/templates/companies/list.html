@@ -15,8 +15,8 @@
             </div>
             <p>
                 {% if my_company_list|length > 0 %}
-                    <a href="{% url 'join_company' %}">Join A Company</a>
-                    <button class="btn btn-8 btn-sep"><a href="{% url 'create_company' %}"><i class='far fa-building'></i>Create A New Company</a></button>
+        <button class="btn btn-8 btn-sep"><a href="{% url 'create_company' %}"><i class='far fa-building'></i>Create A New Company</a></button><br><br>
+        <button class="btn btn-5 btn-sep"><i class='fas fa-link'></i><a href="{% url 'join_company' %}">Join A Company</a></button>
                 {% endif %}
 
             </p>
