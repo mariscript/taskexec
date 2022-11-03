@@ -109,12 +109,16 @@ def task_chart(request):
         x_end="Finish",
         y="Task",
         color="Project",
+        title="My Tasks",
     )
 
     fig.update_layout(
         {
             "plot_bgcolor": "rgba(0, 0, 0, 0)",
             "paper_bgcolor": "rgba(0, 0, 0, 0)",
+            "font_color": "rgb(100, 100, 100)",
+            "font_family": "Roboto Slab, serif",
+            "font_size": 16,
         }
     )
 
