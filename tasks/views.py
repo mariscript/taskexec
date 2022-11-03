@@ -113,8 +113,8 @@ def task_chart(request):
 
     fig.update_layout(
         {
-            "plot_bgcolor": "rgb(0, 0, 0)",
-            "paper_bgcolor": "rgb(0, 0, 0)",
+            "plot_bgcolor": "rgba(0, 0, 0, 0)",
+            "paper_bgcolor": "rgba(0, 0, 0, 0)",
         }
     )
 
