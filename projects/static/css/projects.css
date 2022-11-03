@@ -88,7 +88,8 @@ select {
 .btn-5,
 .btn-6,
 .btn-7,
-.btn-8 
+.btn-8,
+.btn-9
  {
 	background: #3f4244;
 	color: #fff;
@@ -105,7 +106,8 @@ select {
 .btn-5:active,
 .btn-6:active,
 .btn-7:active,
-.btn-8:active {
+.btn-8:active,
+.btn-9:active {
 	background: #2980b9;
 	top: 2px;
 }
@@ -117,7 +119,8 @@ select {
 .btn-5:before,
 .btn-6:before,
 .btn-7:before,
-.btn-8:before {
+.btn-8:before,
+.btn-9:before {
 	position: absolute;
 	height: 100%;
 	left: 0;
@@ -133,18 +136,10 @@ select {
 	background: #27ae60;
 }
 
-
-
-
-
 /* Button 3 */
 .btn-3:hover {
 	background: #c0392b;
 }
-
-
-
-
 
 /* Button 4 */
 
@@ -152,11 +147,9 @@ select {
 	background: #2c3e50;
 }
 
-
 .btn-5:hover {
 	background: #b9712a;
 }
-
 
 
 .btn-6:hover {
@@ -168,13 +161,13 @@ select {
 	background: #057f5e;
 }
 
-
-
 .btn-8:hover {
 	background: #057f5e;
 }
 
-
+.btn-9:hover {
+  background: #fff;
+}
 
 /* Icons */
 
