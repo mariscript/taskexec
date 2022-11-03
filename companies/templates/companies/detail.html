@@ -7,8 +7,13 @@
     <main>
         <div class="project-list">
             <h1>{{ show_company.name }}</h1>
+<<<<<<< HEAD
             {% if show_company.owner == user or user in show_company.employees.all %}
             <button class="btn btn-9 btn-sep"><a href="{% url 'delete_company' show_company.id %}"><i class='far fa-building'></i>Delete This Company</a></button>
+=======
+            {% if show_company.owner == user %}
+            <a href="{% url 'delete_company' show_company.id %}">Delete This Company</a>
+>>>>>>> 580cc1d18acb62e2d6b17078cbbe0d7cad7eb1c3
             <div class="search-bar">
         <form action="{% url 'search_project' %}" method="get">
       <input type="text" placeholder="Search Projects" name="search">
@@ -16,7 +21,7 @@
         </form>
             </div>
             <p>
-                <button class="btn btn-8 btn-sep"><a href="{% url 'create_project' %}"><i class='fas fa-project-diagram'></i>Create A New Project</a></button>
+                <a href="{% url 'create_project' %}">Create A New Project</a>
             </p>
             {% else %}
                     <div class="search-bar">
