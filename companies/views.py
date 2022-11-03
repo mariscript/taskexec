@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from companies.models import Company
 from django.db.models import Q
-from companies.forms import CompanyForm
+from companies.forms import CompanyForm, EmployeeForm
 
 # Create your views here.
 # Create your views here.
@@ -10,7 +10,7 @@ from companies.forms import CompanyForm
 
 @login_required
 def my_company_list(request):
-    companies = Company.objects.filter(owner=request.user)
+    companies = Company.objects.all()
     context = {
         "my_company_list": companies,
     }
@@ -29,8 +29,28 @@ def create_company(request):
     else:
         form = CompanyForm()
 
-    context = {"form": form}
+    context = {
+        "form": form,
+    }
     return render(request, "companies/create.html", context)
+
+
+@login_required
+def join_company(request):
+    if request.method == "POST":
+        form = EmployeeForm(request.POST)
+        if form.is_valid():
+            employee = form.save(False)
+            employee.owner = request.user
+            form.save()
+            return redirect("my_company_list")
+    else:
+        form = EmployeeForm()
+
+    context = {
+        "form": form,
+    }
+    return render(request, "companies/join.html", context)
 
 
 @login_required

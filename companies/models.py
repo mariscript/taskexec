@@ -16,3 +16,16 @@ class Company(models.Model):
 
     class Meta:
         verbose_name_plural = "Companies"
+
+
+class Employee(models.Model):
+    owner = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        related_name="employees",
+        on_delete=models.CASCADE,
+    )
+    company = models.ForeignKey(
+        Company,
+        related_name="employees",
+        on_delete=models.CASCADE,
+    )

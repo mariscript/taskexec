@@ -5,6 +5,7 @@ from companies.views import (
     search_company,
     show_company,
     delete_company,
+    join_company
 )
 
 urlpatterns = [
@@ -12,5 +13,6 @@ urlpatterns = [
     path("mine/<int:id>/", show_company, name="show_company"),
     path("mine/<int:id>/delete/", delete_company, name="delete_company"),
     path("create/", create_company, name="create_company"),
+    path("join/", join_company, name="join_company"),
     path("search/", search_company, name="search_company"),
 ]

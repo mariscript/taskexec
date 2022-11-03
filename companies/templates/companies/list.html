@@ -15,6 +15,10 @@
             </div>
             <p>
                 <a href="{% url 'create_company' %}">Create A New Company</a>
+                {% if my_company_list|length > 0 %}
+                    <a href="{% url 'join_company' %}">Join A Company</a>
+                {% endif %}
+
             </p>
             {% if not my_company_list %}
                 <p>You are not a part of any companies</p>
@@ -24,6 +28,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Owner</th>
+                            <th>Employees</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,6 +38,11 @@
                                     <a href="{% url 'show_company' company.id %}">{{ company.name }}</a>
                                 </td>
                                 <td>{{ company.owner }}</td>
+                                <td>
+                                    {% for employee in company.employees.all %}
+                                        {{ employee.owner }}<br>
+                                    {% endfor %}
+                                </td>
                             </tr>
                         {% endfor %}
                     </tbody>
