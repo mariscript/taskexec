@@ -1,5 +1,6 @@
 from django.forms import ModelForm
 from tasks.models import Task, Note
+from projects.models import Project
 
 
 class TaskForm(ModelForm):
@@ -12,6 +13,15 @@ class TaskForm(ModelForm):
             "project",
             "assignee",
         ]
+
+    def __init__(self, request, *args, **kwargs):
+        super(TaskForm, self).__init__(
+            *args,
+            **kwargs,
+        )
+        self.fields["project"].queryset = Project.objects.filter(
+            owner=request.user
+        )
 
 
 class NoteForm(ModelForm):

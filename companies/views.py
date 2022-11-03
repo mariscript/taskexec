@@ -34,6 +34,15 @@ def create_company(request):
 
 
 @login_required
+def show_company(request, id):
+    show_company = Company.objects.get(id=id)
+    context = {
+        "show_company": show_company,
+    }
+    return render(request, "companies/detail.html", context)
+
+
+@login_required
 def search_company(request):
     query = request.GET.get("search")
     companies = Company.objects.filter(Q(name__icontains=query))
