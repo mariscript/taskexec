@@ -30,3 +30,11 @@ class NoteForm(ModelForm):
         fields = [
             "description",
         ]
+
+
+class Checked(ModelForm):
+    class Meta:
+        model = Task
+        fields = [
+            "is_completed",
+        ]

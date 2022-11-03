@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
     My Tasks
 {% endblock title %}
+{% block customscript %}
+<script defer src="{% static 'list.js' %}"></script>
+{% endblock customscript %}
 {% block content %}
     <main>
         <div class="my-tasks-list">
@@ -35,7 +39,7 @@
                                 <td>{{ task.start_date|date:"m/j/y" }} {{ task.start_date|time:"h:i" }}</td>
                                 <td>{{ task.due_date|date:"m/j/y" }} {{ task.due_date|time:"h:i" }}</td>
                                 <td>
-                                <form method="post" action="#">
+                                <form class="is_completed" method="post" action="{% url 'toggle_task' task.id %}">
                                 {% csrf_token %}
                                 <input type="checkbox" name="is_completed" {% if task.is_completed %}checked{% endif %} />
                                 </form></td>

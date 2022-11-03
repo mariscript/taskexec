@@ -134,3 +134,10 @@ def task_chart(request):
         "plot_div": gantt_plot,
     }
     return render(request, "tasks/chart.html", context)
+
+
+def toggle(request, id):
+    task = Task.objects.get(id=id)
+    task.is_completed = not task.is_completed
+    task.save()
+    return redirect("show_my_tasks")
