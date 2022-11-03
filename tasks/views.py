@@ -93,7 +93,18 @@ def task_chart(request):
     df = pd.DataFrame(projects_data)
 
     fig = px.timeline(
-        df, x_start="Start", x_end="Finish", y="Task", color="Project"
+        df,
+        x_start="Start",
+        x_end="Finish",
+        y="Task",
+        color="Project",
+    )
+
+    fig.update_layout(
+        {
+            "plot_bgcolor": "rgb(0, 0, 0)",
+            "paper_bgcolor": "rgb(0, 0, 0)",
+        }
     )
 
     fig.update_yaxes(autorange="reversed")
