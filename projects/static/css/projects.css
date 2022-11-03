@@ -74,9 +74,11 @@ select {
 	padding: 5px 6px 5px 6px;
 }
 
+
 .btn-sep:before {
 	background: rgba(0,0,0,0.15);
 }
+
 
 /* Button 1 */
 .btn-1 {
