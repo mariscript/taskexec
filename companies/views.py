@@ -34,6 +34,20 @@ def create_company(request):
 
 
 @login_required
+def delete_company(request, id):
+    company = Company.objects.get(id=id)
+    if request.method == "POST":
+        company.delete()
+        return redirect("my_company_list")
+
+    context = {
+        "single_company": company,
+    }
+
+    return render(request, "companies/delete.html", context)
+
+
+@login_required
 def show_company(request, id):
     show_company = Company.objects.get(id=id)
     context = {

@@ -37,10 +37,11 @@
                                 <td>
                                 <form method="post" action="#">
                                 {% csrf_token %}
-                                <input type="checkbox" name="is_completed" {% if task.is_completed %}checked{% endif %} />
-                                </form></td>
+                                <input type="checkbox" id="{{task.name}}"name="is_completed" value="" {% if task.is_completed %}checked = "checked" {% endif %} />
+                                </form>
+                                </td>
 
-                            
+
                         {% endfor %}
                     </tbody>
                 </table>
