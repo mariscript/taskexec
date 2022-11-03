@@ -113,13 +113,19 @@ def task_chart(request):
     )
 
     fig.update_layout(
-        {
-            "plot_bgcolor": "rgba(0, 0, 0, 0)",
-            "paper_bgcolor": "rgba(0, 0, 0, 0)",
-            "font_color": "rgb(100, 100, 100)",
-            "font_family": "Roboto Slab, serif",
-            "font_size": 16,
-        }
+        plot_bgcolor="rgba(0, 0, 0, 0)",
+        paper_bgcolor="rgba(0, 0, 0, 0)",
+        font_color="rgb(100, 100, 100)",
+        font_family="Roboto Slab, serif",
+        font_size=16,
+        yaxis_title="Tasks",
+        title={
+            "text": "My Tasks",
+            "y": 0.9,
+            "x": 0.5,
+            "xanchor": "center",
+            "yanchor": "top",
+        },
     )
 
     fig.update_yaxes(autorange="reversed")
