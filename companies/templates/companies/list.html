@@ -14,9 +14,9 @@
                 </form>
             </div>
             <p>
-                <a href="{% url 'create_company' %}">Create A New Company</a>
                 {% if my_company_list|length > 0 %}
                     <a href="{% url 'join_company' %}">Join A Company</a>
+                    <button class="btn btn-8 btn-sep"><a href="{% url 'create_company' %}"><i class='far fa-building'></i>Create A New Company</a></button>
                 {% endif %}
 
             </p>

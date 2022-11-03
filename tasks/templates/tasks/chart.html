@@ -1,7 +1,7 @@
 {% extends "tasks/chart_base.html" %}
 
 {% block content %}
-    <p><a href="{% url 'show_my_tasks' %}">List View</a></p>
+    <p><button class="btn btn-7 btn-sep"><a href="{% url 'show_my_tasks' %}"><i class='fas fa-list'></i>List View</a></button></p>
 
     {% autoescape off %}
         {{ plot_div }}

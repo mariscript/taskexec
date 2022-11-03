@@ -16,9 +16,9 @@
       <input type="text" placeholder="Search Tasks" name="search">
       <button type="submit" class="w3-button w3-white w3-border w3-border-black w3-round-large"><i class="fa fa-search"></i></button>
         </form></div>
-            <a href="{% url 'create_task' %}">Create A New Task</a>
+            <button class="btn btn-8 btn-sep"><a href="{% url 'create_task' %}"><i class="fa-solid fa-list-check"></i>Create A New Task</a></button>
             {% if task_list|length > 0 %}
-            <p><a href="{% url 'task_chart' %}">Chart View</a></p>
+            <p><button class="btn btn-6 btn-sep"><a href="{% url 'task_chart' %}"><i class="fa fa-bar-chart"></i>Chart View</a></button></p>
             {% endif %}
             {% if not task_list %}
                 <p>You have no tasks</p>
