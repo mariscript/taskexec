@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from companies.models import Company, Employee
+from django.db.models import Q
 from companies.forms import CompanyForm
 
 # Create your views here.
@@ -33,3 +34,13 @@ def create_company(request):
 
     context = {"form": form}
     return render(request, "companies/create.html", context)
+
+
+@login_required
+def search_company(request):
+    query = request.GET.get("search")
+    companies = Company.objects.filter(Q(name__icontains=query))
+    context = {
+        "results": companies,
+    }
+    return render(request, "companies/search.html", context)

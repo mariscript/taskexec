@@ -8,7 +8,7 @@
         <div class="my-tasks-list">
             <h1>My Tasks</h1>
         <div class="search-bar">
-        <form action="/action_page.php">
+        <form action="{% url 'search_task' %}">
       <input type="text" placeholder="Search Tasks" name="search">
       <button type="submit" class="w3-button w3-white w3-border w3-border-black w3-round-large"><i class="fa fa-search"></i></button>
         </form></div>

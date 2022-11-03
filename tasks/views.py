@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from tasks.forms import NoteForm, TaskForm
 from tasks.models import Task
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 import pandas as pd
 from plotly.offline import plot
 import plotly.express as px
@@ -74,6 +75,16 @@ def delete_task(request, id):
     }
 
     return render(request, "tasks/delete.html", context)
+
+
+@login_required
+def search_task(request):
+    query = request.GET.get("search")
+    tasks = Task.objects.filter(Q(name__icontains=query))
+    context = {
+        "results": tasks,
+    }
+    return render(request, "tasks/search.html", context)
 
 
 @login_required
