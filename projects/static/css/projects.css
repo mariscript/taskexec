@@ -25,6 +25,10 @@ select {
   padding: 0;
 }
 
+
+
+
+
 .login-button {
   background-color: #968e8e;
   color: black;
@@ -213,15 +217,7 @@ img {
 }
 
 
-/* .img {
-  width: 400px;
-  height: 200px;
-  border:2px solid #fff;
-  box-shadow: 10px 10px 5px #ccc;
-  -moz-border-radius:25px;
-  -webkit-border-radius:25px;
-  border-radius:25px;
-} */
+
 
 /* Make the input tags look nicer */
 input {
@@ -349,7 +345,7 @@ table {
   padding: 2em;
 }
 
-
+.my_company-list,
 .project-list {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
@@ -359,9 +355,7 @@ table {
   padding: 2em;
 }
 
-/* .my-tasks-list th {
-  color: black;
-} */
+
 
 /* Add padding to the table header and table datum tags */
 
@@ -373,6 +367,7 @@ table {
 }
 
 /* Add a bottom border to the table header tags */
+.my_company-list thead tr th,
 .my-tasks-list thead tr th,
 .project-list thead tr th,
 .project-detail thead tr th {
@@ -380,6 +375,7 @@ table {
 }
 
 /* Center align the text on specific table header cells */
+.my_company-list tbody tr td,
 .my-tasks-list tbody td:nth-child(2),
 .my-tasks-list tbody td:nth-child(3),
 .my-tasks-list tbody td:nth-child(4),
@@ -479,11 +475,7 @@ footer {
 }
 
 
-/*
-html {
-  --background-primary: #fff;
-  --color-primary: #333;
-} */
+
 .fa {
   display: flex;
   float: right;
