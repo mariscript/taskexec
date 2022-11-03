@@ -22,16 +22,19 @@
                 {% if user.is_authenticated %}
                     <ul>
                         <li>
-                            <button class="btn btn-1"><a href="{% url 'home_page' %}"><i class="fa-solid fa-house"></i>Home</a></button>
+                            <button class="btn btn-1 btn-sep"><a href="{% url 'home_page' %}"><i class="fa-solid fa-house"></i>Home</a></button>
                         </li>
                         <li>
-                            <button class="btn btn-2"><a href="{% url 'list_projects' %}"><i class='fas fa-project-diagram'></i>Projects</a></button>
+                            <button class="btn btn-5 btn-sep"><a href="{% url 'my_company_list' %}"><i class='far fa-building'></i>Companies</a></button>
                         </li>
                         <li>
-                            <button class="btn btn-3"><a href="{% url 'show_my_tasks' %}"><i class="fa-solid fa-list-check"></i>My Tasks</a></button>
+                            <button class="btn btn-2 btn-sep"><a href="{% url 'list_projects' %}"><i class='fas fa-project-diagram'></i>Projects</a></button>
                         </li>
                         <li>
-                            <button class="btn btn-4"><a href="{% url 'logout' %}"><i class='fas'>&#xf2f5;</i>Logout</a></button>
+                            <button class="btn btn-3 btn-sep"><a href="{% url 'show_my_tasks' %}"><i class="fa-solid fa-list-check"></i>My Tasks</a></button>
+                        </li>
+                        <li>
+                            <button class="btn btn-4 btn-sep"><a href="{% url 'logout' %}"><i class='fas'>&#xf2f5;</i>Logout</a></button>
                         </li>
                     {% else %}
                         <li>
