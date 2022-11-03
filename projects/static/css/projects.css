@@ -205,7 +205,29 @@ select {
 	width: 60px;
 }
 
+.btn-6 {
+	background: #3f4244;
+	color: #fff;
+}
 
+.btn-6:hover {
+	background: #057f5e;
+}
+
+.btn-6:active {
+	background: #2c3e50;
+	top: 2px;
+}
+
+.btn-6:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 3;
+	font-size: 140%;
+	width: 60px;
+}
 
 
 
