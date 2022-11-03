@@ -229,6 +229,29 @@ select {
 	width: 60px;
 }
 
+.btn-7 {
+	background: #3f4244;
+	color: #fff;
+}
+
+.btn-7:hover {
+	background: #057f5e;
+}
+
+.btn-7:active {
+	background: #2c3e50;
+	top: 2px;
+}
+
+.btn-7:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 3;
+	font-size: 140%;
+	width: 60px;
+}
 
 
 
