@@ -15,7 +15,7 @@
         </form>
             </div>
             <p>
-                <a href="{% url 'create_project' %}">Create A New Project</a>
+                <button class="btn btn-8 btn-sep"><a href="{% url 'create_project' %}"><i class='fas fa-project-diagram'></i>Create A New Project</a></button>
             </p>
             {% if not show_company.projects.all %}
                 <p>This company has not created any projects</p>

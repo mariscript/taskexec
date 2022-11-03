@@ -11,7 +11,7 @@ class Company(models.Model):
         on_delete=models.CASCADE,
     )
 
-    def str(self):
+    def __str__(self):
         return self.name
 
     class Meta:
