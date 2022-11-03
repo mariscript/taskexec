@@ -11,12 +11,12 @@ import plotly.express as px
 @login_required
 def create_task(request):
     if request.method == "POST":
-        form = TaskForm(request.POST)
+        form = TaskForm(request, request.POST)
         if form.is_valid():
             form.save()
             return redirect("list_projects")
     else:
-        form = TaskForm()
+        form = TaskForm(request)
 
     context = {
         "form": form,

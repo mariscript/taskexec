@@ -30,7 +30,7 @@
                         {% for company in my_company_list %}
                             <tr>
                                 <td>
-                                    {{ company.name }}
+                                    <a href="{% url 'show_company' company.id %}">{{ company.name }}</a>
                                 </td>
                                 <td>{{ company.owner }}</td>
                             </tr>
