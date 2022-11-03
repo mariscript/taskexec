@@ -7,7 +7,7 @@
     <main>
         <div class="project-list">
             <h1>{{ show_company.name }}</h1>
-            <a href="{% url 'delete_company' show_company.id %}">Delete This Company</a>
+            <button class="btn btn-9 btn-sep"><a href="{% url 'delete_company' show_company.id %}"><i class='far fa-trash-alt'></i>Delete This Company</a></button>
             <div class="search-bar">
         <form action="{% url 'search_project' %}" method="get">
       <input type="text" placeholder="Search Projects" name="search">
