@@ -7,6 +7,12 @@
     <main>
         <div class="project-list">
             <h1>My Projects</h1>
+            <div class="search-bar">
+        <form action="/action_page.php">
+      <input type="text" placeholder="Search Projects" name="search">
+      <button type="submit" class="w3-button w3-white w3-border w3-border-black w3-round-large"><i class="fa fa-search"></i></button>
+        </form>
+            </div>
             <p>
                 <a href="{% url 'create_project' %}">Create A New Project</a>
             </p>

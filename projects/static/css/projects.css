@@ -19,7 +19,6 @@ form {
 
 input,
 textarea,
-button,
 select {
   margin: 0;
   padding: 0;
@@ -27,25 +26,8 @@ select {
 
 
 
-
-
-.login-button {
-  background-color: #968e8e;
-  color: black;
-  border: none;
-  border-radius: 12px;
-  padding: 50px 50px;
-  position: fixed;
-  transition-duration: 0.4s;
-  left: 35%;
-}
-
-.login-button:hover {
-  background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transition-duration: 0.4s;
-}
-
+.logout-button,
+.tasks-button,
 .signup-button {
   background-color: #968e8e;
   color: black;
@@ -57,12 +39,19 @@ select {
   right: 35%;
 }
 
+.comp-button:hover,
+.logout-button:hover,
+.tasks-button:hover,
+.projects-button:hover,
+.login-button:hover,
 .signup-button:hover {
   background-color: #6e816e;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   transition-duration: 0.4s;
 }
 
+.comp-button,
+.login-button,
 .projects-button {
   background-color: #968e8e;
   color: black;
@@ -74,66 +63,7 @@ select {
   left: 35%;
 }
 
-.projects-button:hover {
-  background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transition-duration: 0.4s;
-}
 
-.tasks-button {
-  background-color: #968e8e;
-  color: black;
-  border: none;
-  border-radius: 12px;
-  padding: 50px 50px;
-  position: fixed;
-  transition-duration: 0.4s;
-  right: 35%;
-}
-
-.tasks-button:hover {
-  background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transition-duration: 0.4s;
-}
-
-
-.logout-button {
-  background-color: #968e8e;
-  color: black;
-  border: none;
-  border-radius: 12px;
-  padding: 50px 50px;
-  position: fixed;
-  transition-duration: 0.4s;
-  right: 35%;
-}
-
-
-.logout-button:hover {
-  background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transition-duration: 0.4s;
-}
-
-
-.comp-button {
-  background-color: #968e8e;
-  color: black;
-  border: none;
-  border-radius: 12px;
-  padding: 50px 50px;
-  position: fixed;
-  transition-duration: 0.4s;
-  left: 35%;
-}
-
-
-.comp-button:hover {
-  background-color: #6e816e;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transition-duration: 0.4s;
-}
 
 
 
@@ -356,6 +286,17 @@ table {
 }
 
 
+.search-bar {
+  float: right;
+}
+
+.search-bar input[type=text] {
+  padding: 6px;
+  border: none;
+  margin: 1px 16px 16px 3px;
+  font-size: 17px;
+}
+
 
 /* Add padding to the table header and table datum tags */
 
@@ -476,21 +417,6 @@ footer {
 
 
 
-.fa {
-  display: flex;
-  float: right;
-  width: 3%;
-  margin: auto;
-  right: 6%;
-}
-
-.fa-mode {
-  display: flex;
-  float: right;
-  margin: auto;
-  position: absolute;
-  right: 10%;
-}
 
 html[data-theme='dark'] {
   --background-primary: rgba(0, 0, 0, 0.9);
