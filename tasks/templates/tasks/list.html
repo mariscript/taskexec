@@ -23,9 +23,9 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Start date</th>
-                            <th>Due date</th>
-                            <th>Is completed</th>
+                            <th>Start Date</th>
+                            <th>Due Date</th>
+                            <th>Is Completed</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,7 +34,12 @@
                                 <td><a href="{% url 'show_task' task.id %}">{{ task.name }}</a></td>
                                 <td>{{ task.start_date|date:"m/j/y" }} {{ task.start_date|time:"h:i" }}</td>
                                 <td>{{ task.due_date|date:"m/j/y" }} {{ task.due_date|time:"h:i" }}</td>
-                                <td>{{ task.is_completed|yesno:"Done,no" }}</td>
+                                <td>
+                                <form method="post" action="#">
+                                {% csrf_token %}
+                                <input type="checkbox" name="is_completed" {% if task.is_completed %}checked{% endif %} />
+                                </form></td>
+
                             </tr>
                         {% endfor %}
                     </tbody>
