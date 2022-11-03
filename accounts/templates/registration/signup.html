@@ -37,7 +37,7 @@
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button>Sign Up</button>
+                <button class="btn btn-8 btn-sep">Sign Up</button>
             </form><br>
             <li>
             <button class="btn btn-8 btn-sep"><a href="{% url 'login' %}"><i class='fas fa-sign-in-alt'></i>Login</a></button>

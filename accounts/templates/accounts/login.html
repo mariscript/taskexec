@@ -39,7 +39,7 @@
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button>Login</button>
+                <button class="btn btn-8 btn-sep">Login</button>
             </form><br>
             <button class="btn btn-8 btn-sep"><li class ="signup-link"><a href="{% url 'signup' %}"><i class='fas fa-pen-fancy'></i>Sign Up</a></button></li>
         </div>
